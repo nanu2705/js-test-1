@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+         
+    <style>
+        body{
+            margin: 0;
+        }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                background-color: rgba(0, 0, 255, 0.5);
+                color: white;
+                margin: 0px;
+                height: 90px;
+                align-items: center;
+              
+                
+                
+            }
+            .left{
+                display: flex;
+                justify-content: space-between;
+                padding: 2px;
+                gap: 10px;
+                margin: 0px 50px;
+                align-items: center;
+               
+            }
+            
+            .center{
+                align-items: center;
+                margin: 0px;
+            }
+         
+            span{
+                border-right: 2px solid white;
+                padding:0 10px 0 0;
+
+            }
+            .right{
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0px 50px;
+                gap: 20px;
+               
+
+
+                .hover{
+                  cursor: pointer;
+                }
+
+                
+            } 
+            .list{
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    list-style: none;
+                    background-color: rgba(0, 0, 255, 0.404);
+                    gap: 10px;
+                    animation: name 1s;
+                    border: 1px solid black;
+                   
+                    li{
+                        padding: 5px 19px;
+                        cursor: pointer;
+                        
+                        &:hover{
+                           background-color: rgba(0, 0, 255, 0.623);
+                        }
+                    }
+                }
+           
+            
+            .buttons{
+                display: flex;
+                justify-content: center;
+                height: 100px;
+                margin-top: 20px;
+                gap: 50px;
+               
+                
+
+                button{
+                    height: 50px;
+                    width: 90px;
+                    border: none;
+                    border-radius: 8px ;
+                    background-color: plum;
+                    cursor: pointer;
+                }
+            }
+
+            .image{
+                display: flex;
+                justify-content: center;
+                height: 300px;
+            }
+
+            @keyframes name {
+                0%{transform: scale(0);}
+                100%{transform: scale(1);}
+            }
+    </style>
+<body>
+        <div class="header">
+            <div class="left">
+                
+                <span>follow us</span>
+               <span> <i class="fa-brands fa-facebook"></i></span>
+                <span><i class="fa-brands fa-twitter"></i></span>   
+                     <span><i class="fa-brands fa-instagram"></i></span>
+           </div>
+            <div class="center">
+                <h2>FOOD CAFE</h2>
+            </div>
+            <div class="right">
+                <span><i class="fa-solid fa-earth-americas"></i></span>
+                    <span ><div class="hover" onclick="hover()">English <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="list" id="list">
+                            <li>English</li>
+                            <li>Italian</li>
+                            <li>France</li>
+                            <li>Spanish</li>
+                            <li>Poland</li>
+                            <li>German</li>
+                         </div> 
+                    </div>
+                </span>
+                
+            
+                   <h3>Login</h3>
+               
+            </div>
+            
+        </div>
+ 
+        <div class="buttons">
+         <button onclick="home()">Home</button>
+         <button onclick="service()">Service</button>
+         <button onclick="contact()">Contact</button>
+         
+        </div>
+
+        <div class="image">
+            <img src="./image1.jpg"  id="demo">
+        </div>
+        
+</body>
+
+<script>
+    function home(){
+          document.getElementById("demo").src="./image1.jpg";
+     }
+     function service(){
+          document.getElementById("demo").src="./image3.jpg";
+     }
+     function contact(){
+          document.getElementById("demo").src="./image4.jpg";
+     }
+     
+    function hover(){
+
+        if( document.getElementById('list').style.display!=='block'){
+     document.getElementById('list').style.display='block';
+        }
+        else{
+            document.getElementById('list').style.display='none';
+        }
+    }
+</script>
+</html>
